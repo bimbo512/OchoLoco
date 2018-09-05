@@ -1,13 +1,14 @@
 # OchoLoco
 OchoLoco Cartas
 ////////////////////Carta.java///////////////////////
-* Caso de estudio: Ocho loco
+/* Caso de estudio: Ocho loco
  * Repaso del encoque orientado a objetos
  * Taller1
  * Curso de PI
  * EISC Univalle
  * Juan Felipe Alvarado(1745283)
  * Daniel Bermudez (1742658)
+ 
  */
 
 package ochoLoco;
@@ -31,6 +32,8 @@ public class Carta {
 	
 	String[] Numero = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 	
+	ArrayList<String> baraja = new ArrayList<String>();
+	
 	private char palo;
 	
 	private int numero;
@@ -52,12 +55,44 @@ public class Carta {
 	{
 		return estado;
 	}
-	
+	String palos="";
+	String numeros="";
 	public void cartaRandom()
 	{
-		for(int palos=0; palos<=3; palos++)
+		for(int palo=0; palo<=3; palo++)
 		{
-			
+			if (palo==0)
+			{
+				palos="D";
+			}
+			else 
+				if (palo==1)
+				{
+					palos="T";
+				}
+				else 
+					if (palo==2)
+					{
+						palos="C";
+					}
+				else 
+					if (palo==3)
+					{
+						palos="P";
+					}
+			for(int numero=1; numero<=13; numero++)
+			{
+				numeros=String.valueOf(numero);
+				if (numero==1)
+				{
+					baraja.add(palos+"A");
+				}
+				else
+					if (numero==10)
+					{
+						baraja.add(palos+"Q")
+					}
+			}
 		}
 	}
 /*	public void cartaRandom()
@@ -77,7 +112,6 @@ public class Carta {
 			
 		}
 	}
-	ArrayList<String> baraja = new ArrayList<String>();
 	
 	public void repartirCartas()
 	{
@@ -90,7 +124,6 @@ public class Carta {
 	
 
 }
-
 //////////////////////COntrol.java///////////////////////
 
 package ochoLoco;
