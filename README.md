@@ -58,7 +58,7 @@ public class Carta {
 	}
 	String figura="";
 	String numeros="";
-	public void cartaRandom()
+	public String cartaRandom()
 	{
 		for(int palo=0; palo<=3; palo++)
 		{
@@ -109,7 +109,9 @@ public class Carta {
 							}
 			}
 		}
+	return auxCarta;
 	}
+	String auxCarta;
 /*	public void cartaRandom()
 	{
 		Random randomPrincipal = new Random();
@@ -122,14 +124,17 @@ public class Carta {
 	
 	public void cartaRepetida()
 	{
-		if(armaMazo()==)
+		if()
 	}
-	public void armaMazo()
+	public String armaMazo()
 	{
+		//auxCarta=cartaRandom();
 		for(int i=0; i<=51; i++)
 		{
-			baraja.add(cartaRandom());
+			mazo.add(i, cartaRandom());
+			if (mazo.get(i))
 		}
+		return 
 	}
 	
 	public void repartirCartas()
